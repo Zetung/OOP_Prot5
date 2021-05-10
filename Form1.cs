@@ -36,6 +36,7 @@ namespace OOP_Prot5
         {
             typeof(Stick),
             typeof(RectangleClass),
+            typeof(ElipseOb),
         };
 
         public Form1()
@@ -72,7 +73,7 @@ namespace OOP_Prot5
 
         private string ChooseFigure(int num)
         {
-            string[] arr = {"Stick","RectangleClass"};
+            string[] arr = {"Stick","RectangleClass","ElipseOb"};
             return arr[num];
         }
         private void Click_Button(object sender, EventArgs e)

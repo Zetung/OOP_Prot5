@@ -119,7 +119,8 @@ namespace OOP_Prot5
             this.FigureBox.FormattingEnabled = true;
             this.FigureBox.Items.AddRange(new object[] {
             "Stick",
-            "Rectangle"});
+            "Rectangle",
+            "Ellipse"});
             this.FigureBox.Location = new System.Drawing.Point(476, 617);
             this.FigureBox.Name = "FigureBox";
             this.FigureBox.Size = new System.Drawing.Size(92, 21);

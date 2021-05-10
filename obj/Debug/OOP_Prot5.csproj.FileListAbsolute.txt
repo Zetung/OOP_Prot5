@@ -1,0 +1,10 @@
+E:\.Work\OOP\OOP_Prot5\bin\Debug\OOP_Prot5.exe.config
+E:\.Work\OOP\OOP_Prot5\bin\Debug\OOP_Prot5.exe
+E:\.Work\OOP\OOP_Prot5\bin\Debug\OOP_Prot5.pdb
+E:\.Work\OOP\OOP_Prot5\obj\Debug\OOP_Prot5.csprojAssemblyReference.cache
+E:\.Work\OOP\OOP_Prot5\obj\Debug\OOP_Prot5.Form1.resources
+E:\.Work\OOP\OOP_Prot5\obj\Debug\OOP_Prot5.Properties.Resources.resources
+E:\.Work\OOP\OOP_Prot5\obj\Debug\OOP_Prot5.csproj.GenerateResource.cache
+E:\.Work\OOP\OOP_Prot5\obj\Debug\OOP_Prot5.csproj.CoreCompileInputs.cache
+E:\.Work\OOP\OOP_Prot5\obj\Debug\OOP_Prot5.exe
+E:\.Work\OOP\OOP_Prot5\obj\Debug\OOP_Prot5.pdb

@@ -7,16 +7,15 @@ using System.Drawing;
 
 namespace OOP_Prot5
 {
-    class palochka: IFigure
+    class Stick: IFigure
     {
         private int x1, y1, x2, y2;
-        private int tolshina;
-        Color CvetObvodka;
-        Graphics risovka;
+        private int thicknessVal;
+        Color colorOutline;
+        Graphics pictureG;
 
 
         // свойства
-        // Первоначально в свойства я пихал проверку чзначения, на знак, но позже понял что это не нужно
         public int X1 
         { 
             get 
@@ -66,19 +65,19 @@ namespace OOP_Prot5
         }
 
         //конструктор
-        public virtual void Init(Graphics pole, int tolsh, Color cvet, Color Nasled)
+        public virtual void Init(Graphics pole, int thick, Color col, Color other)
         {
-            risovka = pole;
-            tolshina = tolsh;
-            CvetObvodka = cvet;
+            pictureG = pole;
+            thicknessVal = thick;
+            colorOutline = col;
         }
 
         public virtual void Draw()
         {
-            Pen myWind = new Pen(CvetObvodka, tolshina);
+            Pen myWind = new Pen(colorOutline, thicknessVal);
             PointF point1 = new PointF(x1, y1);
             PointF point2 = new PointF(x2, y2);
-            risovka.DrawLine(myWind, point1, point2);
+            pictureG.DrawLine(myWind, point1, point2);
         }
     }
 }

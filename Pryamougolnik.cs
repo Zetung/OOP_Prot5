@@ -7,13 +7,13 @@ using System.Drawing;
 
 namespace OOP_Prot5
 {
-    class Pryamougolnik : palochka
+    class RectangleClass : IFigure
     {
         private int x1, y1, x2, y2;
-        private int tolshina;
-        Color CvetObvodka,CvetZapol;
-        Graphics risovka;
-        public new int X1
+        private int thicknessVal;
+        Color colorOutline, colorFull;
+        Graphics pictureG;
+        public int X1
         {
             get
             {
@@ -25,7 +25,7 @@ namespace OOP_Prot5
             }
         }
 
-        public new int Y1
+        public int Y1
         {
             get
             {
@@ -37,7 +37,7 @@ namespace OOP_Prot5
             }
         }
 
-        public new int X2
+        public int X2
         {
             get
             {
@@ -49,7 +49,7 @@ namespace OOP_Prot5
             }
         }
 
-        public new int Y2
+        public int Y2
         {
             get
             {
@@ -60,20 +60,28 @@ namespace OOP_Prot5
                 y2 = value;
             }
         }
-        public override void Init(Graphics pole, int tolsh, Color cvetO, Color cvetZ)
+        public void Init(Graphics pole, int thick, Color colO, Color colZ)
         {
-            risovka = pole;
-            tolshina = tolsh;
-            CvetObvodka = cvetO;
-            CvetZapol = cvetZ;
+            pictureG = pole;
+            thicknessVal = thick;
+            colorOutline = colO;
+            colorFull = colZ;
         }
 
-        public override void Draw()
+        public void Draw()
         {
-            Pen myWind = new Pen(CvetObvodka, tolshina);
-            SolidBrush myBrush = new SolidBrush(CvetZapol);
-            risovka.DrawRectangle(myWind, x1, y1, x2 - x1, y2 - y1);
-            risovka.FillRectangle(myBrush, x1, y1, x2 - x1, y2 - y1);
+            Pen myWind = new Pen(colorOutline, thicknessVal);
+            SolidBrush myBrush = new SolidBrush(colorFull);
+            int xStart, yStart;
+
+            if (x1 <= x2) xStart = x1;
+            else xStart = x2;
+
+            if (y1 <= y2) yStart = y1;
+            else yStart = y2;
+
+            pictureG.DrawRectangle(myWind, xStart, yStart, Math.Abs(x2 - x1), Math.Abs(y2 - y1));
+            pictureG.FillRectangle(myBrush, xStart, yStart, Math.Abs(x2 - x1), Math.Abs(y2 - y1));
         }
     }
 }

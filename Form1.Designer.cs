@@ -36,6 +36,10 @@ namespace OOP_Prot5
             this.label1 = new System.Windows.Forms.Label();
             this.ColorFillBox = new System.Windows.Forms.ComboBox();
             this.FigureBox = new System.Windows.Forms.ComboBox();
+            this.ColorOutlineLabel = new System.Windows.Forms.Label();
+            this.ColorFillLabel = new System.Windows.Forms.Label();
+            this.TypeFigureLabel = new System.Windows.Forms.Label();
+            this.ThicknessLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,11 +126,51 @@ namespace OOP_Prot5
             this.FigureBox.TabIndex = 6;
             this.FigureBox.Text = "Figure";
             // 
+            // ColorOutlineLabel
+            // 
+            this.ColorOutlineLabel.AutoSize = true;
+            this.ColorOutlineLabel.Location = new System.Drawing.Point(175, 598);
+            this.ColorOutlineLabel.Name = "ColorOutlineLabel";
+            this.ColorOutlineLabel.Size = new System.Drawing.Size(68, 13);
+            this.ColorOutlineLabel.TabIndex = 7;
+            this.ColorOutlineLabel.Text = "Color outline:";
+            // 
+            // ColorFillLabel
+            // 
+            this.ColorFillLabel.AutoSize = true;
+            this.ColorFillLabel.Location = new System.Drawing.Point(328, 597);
+            this.ColorFillLabel.Name = "ColorFillLabel";
+            this.ColorFillLabel.Size = new System.Drawing.Size(59, 13);
+            this.ColorFillLabel.TabIndex = 8;
+            this.ColorFillLabel.Text = "Color fullfill:";
+            // 
+            // TypeFigureLabel
+            // 
+            this.TypeFigureLabel.AutoSize = true;
+            this.TypeFigureLabel.Location = new System.Drawing.Point(476, 598);
+            this.TypeFigureLabel.Name = "TypeFigureLabel";
+            this.TypeFigureLabel.Size = new System.Drawing.Size(44, 13);
+            this.TypeFigureLabel.TabIndex = 9;
+            this.TypeFigureLabel.Text = "Figures:";
+            // 
+            // ThicknessLabel
+            // 
+            this.ThicknessLabel.AutoSize = true;
+            this.ThicknessLabel.Location = new System.Drawing.Point(12, 596);
+            this.ThicknessLabel.Name = "ThicknessLabel";
+            this.ThicknessLabel.Size = new System.Drawing.Size(59, 13);
+            this.ThicknessLabel.TabIndex = 10;
+            this.ThicknessLabel.Text = "Thickness:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1271, 650);
+            this.Controls.Add(this.ThicknessLabel);
+            this.Controls.Add(this.TypeFigureLabel);
+            this.Controls.Add(this.ColorFillLabel);
+            this.Controls.Add(this.ColorOutlineLabel);
             this.Controls.Add(this.FigureBox);
             this.Controls.Add(this.ColorFillBox);
             this.Controls.Add(this.label1);
@@ -154,6 +198,10 @@ namespace OOP_Prot5
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ColorFillBox;
         private System.Windows.Forms.ComboBox FigureBox;
+        private System.Windows.Forms.Label ColorOutlineLabel;
+        private System.Windows.Forms.Label ColorFillLabel;
+        private System.Windows.Forms.Label TypeFigureLabel;
+        private System.Windows.Forms.Label ThicknessLabel;
     }
 }
 

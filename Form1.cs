@@ -32,6 +32,11 @@ namespace OOP_Prot5
 
         private Assembly assembly = Assembly.GetExecutingAssembly();
 
+        List<Type> figureTypes = new List<Type>
+        {
+            typeof(Stick),
+            typeof(RectangleClass),
+        };
 
         public Form1()
         {
@@ -67,13 +72,13 @@ namespace OOP_Prot5
 
         private string ChooseFigure(int num)
         {
-            string[] arr = {"palochka","Pryamougolnik"};
+            string[] arr = {"Stick","RectangleClass"};
             return arr[num];
         }
         private void Click_Button(object sender, EventArgs e)
         {
             //int t = TolshinaBox.SelectedIndex*5 + 1;
-            Pryamougolnik num2 = new Pryamougolnik();
+            RectangleClass num2 = new RectangleClass();
             num2.Init(g, TolshinaBox.SelectedIndex * 5 + 1, ChooseColor(ColorBox), Color.Black);
             num2.X1 = 100;
             num2.Y1 = 100;
@@ -87,9 +92,16 @@ namespace OOP_Prot5
         {
             windowTop = Top + 44;
             windowLeft = Left + 21;
-            //num1 = new palochka();
             string temp = ChooseFigure(FigureBox.SelectedIndex);
             Type type = assembly.GetType(temp);
+            for (int i = 0; i < figureTypes.Count; i++)
+            {
+                Type item = figureTypes[i];
+                if (item.Name == temp)
+                {
+                    type = item;
+                }
+            }
             num1 = Activator.CreateInstance(type) as IFigure;
             num1.Init(g, TolshinaBox.SelectedIndex * 5 + 1, ChooseColor(ColorBox), ChooseColor(ColorFillBox));
             num1.X1 = MousePosition.X - windowLeft;
